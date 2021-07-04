@@ -13,3 +13,7 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# air, live reload, create directory and write main file
+# https://github.com/cosmtrek/air
+tmp
