@@ -1,0 +1,10 @@
+services:
+  api:
+    build:
+      context: .
+      target: build
+    ports:
+      - "8100:8080"
+    volumes:
+      - .:/go/src/github.com/kyohei0423/rest-server
+    command: air -d

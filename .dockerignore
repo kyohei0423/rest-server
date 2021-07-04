@@ -1,0 +1,10 @@
+.git
+tmp/
+# LICENSE
+# README.md
+# .editorconfig
+# Makefile
+# NOTICE
+# arm/
+# powerpc/
+# mips/
