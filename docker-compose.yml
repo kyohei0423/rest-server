@@ -1,5 +1,7 @@
 services:
   api:
+    depends_on:
+      - mysql
     build:
       context: .
       target: build
@@ -8,3 +10,17 @@ services:
     volumes:
       - .:/go/src/github.com/kyohei0423/rest-server
     command: air -d
+  mysql:
+    image: mysql:8.0.25
+    restart: always
+    environment: 
+      MYSQL_DATABASE: rest
+      MYSQL_USER: rest
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+    ports: 
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+volumes:
+  db_data: {}
